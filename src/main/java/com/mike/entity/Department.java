@@ -1,4 +1,4 @@
-package entity;
+package com.mike.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,12 +23,6 @@ public class Department {
     private Lector headLector;
 
     public Department() {
-    }
-
-    public Department(String name, Set<Lector> lectors, Lector headLector) {
-        this.name = name;
-        this.lectors = lectors;
-        this.headLector = headLector;
     }
 
     public Long getId() {

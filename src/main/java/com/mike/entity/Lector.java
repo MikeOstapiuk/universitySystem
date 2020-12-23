@@ -1,4 +1,4 @@
-package entity;
+package com.mike.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -6,7 +6,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import java.util.Collections;
 import java.util.Set;
 
 @Entity
@@ -27,17 +26,6 @@ public class Lector {
     private Integer salary;
 
     public Lector() {
-    }
-
-    public Lector(String name, Degree degree, Set<Department> departments, Integer salary) {
-        this.name = name;
-        this.degree = degree;
-        this.departments = departments;
-        this.salary = salary;
-    }
-
-    public Lector(String name, Degree degree, Integer salary) {
-        this(name, degree, Collections.emptySet(), salary);
     }
 
     public Long getId() {

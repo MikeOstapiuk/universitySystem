@@ -1,9 +1,8 @@
-package menu;
+package com.mike.menu;
 
-import entity.Department;
+import com.mike.entity.Department;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,18 +13,10 @@ public class Menu extends MenuItem {
 
     private final List<MenuItem> subMenus;
 
+    @Autowired
     public Menu(String label, List<MenuItem> subMenus) {
         super(label);
         this.subMenus = subMenus;
-    }
-
-    public Menu(String label) {
-        super(label);
-        subMenus = new ArrayList<>();
-    }
-
-    public void addMenuItemToSubMenu(MenuItem... menuItems) {
-        subMenus.addAll(Arrays.asList(menuItems));
     }
 
     @Override

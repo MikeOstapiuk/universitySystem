@@ -1,20 +1,18 @@
-package menu;
+package com.mike.menu;
 
-import entity.Department;
-import service.DepartmentService;
-import service.DepartmentServiceImpl;
+import com.mike.entity.Department;
+import com.mike.service.DepartmentService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-public class DepartmentListMenu extends Menu {
-    private final DepartmentService departmentService = new DepartmentServiceImpl();
+public class DepartmentsMenu extends Menu {
 
-    public DepartmentListMenu(String label, List<MenuItem> subMenus) {
+    @Autowired
+    private DepartmentService departmentService;
+
+    public DepartmentsMenu(String label, List<MenuItem> subMenus) {
         super(label, subMenus);
-    }
-
-    public DepartmentListMenu(String label) {
-        super(label);
     }
 
     @Override

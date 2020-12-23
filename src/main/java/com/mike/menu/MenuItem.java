@@ -1,6 +1,6 @@
-package menu;
+package com.mike.menu;
 
-import entity.Department;
+import com.mike.entity.Department;
 
 abstract public class MenuItem {
     protected String label;

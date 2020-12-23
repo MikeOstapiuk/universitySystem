@@ -1,13 +1,17 @@
-package actions;
+package com.mike.action;
 
-import entity.Department;
-import service.SearchService;
-import service.SearchServiceImpl;
+import com.mike.entity.Department;
+import com.mike.service.SearchService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
+@Component
 public class SearchAction implements Action {
-    private final SearchService searchService = new SearchServiceImpl();
+
+    @Autowired
+    private SearchService searchService;
 
     @Override
     public void doAction(Department context) {

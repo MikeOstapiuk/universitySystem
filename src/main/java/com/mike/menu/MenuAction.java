@@ -1,7 +1,7 @@
-package menu;
+package com.mike.menu;
 
-import actions.Action;
-import entity.Department;
+import com.mike.action.Action;
+import com.mike.entity.Department;
 
 public final class MenuAction extends MenuItem {
     private final Action action;
