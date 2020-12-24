@@ -12,9 +12,6 @@ import java.util.Optional;
 @Repository
 public interface LectorRepository extends JpaRepository<Lector, Long> {
 
-    @Override
-    Optional<Lector> findById(Long aLong);
-
     Long countByDepartments_Id(Long departmentId);
 
     @Query("SELECT new com.mike.queryResult.CountResult(COUNT(*), l.degree) " +
